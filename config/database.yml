@@ -28,6 +28,9 @@ development:
  <<: *default
  database: CircleCITestDB
 
-test:
+test: &test
  <<: *default
  database: CircleCITestDB
+
+cucumber:
+  <<: *test

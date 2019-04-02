@@ -53,5 +53,13 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.0'
 end
 
+group :test do
+  gem 'selenium-webdriver'  # CapybaraがSeleniumに依存しているため追加
+  gem 'capybara', '~> 2.13'          # 英語に文法でRSpecにテストを記述できる
+  gem 'factory_girl_rails'  # FactoryGirl追加
+  gem 'cucumber-rails', :require => false # Cucumber追加
+  gem 'database_cleaner', github: 'bmabey/database_cleaner' # Cucumber用にDBクリーナーを追加
+end
+
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
