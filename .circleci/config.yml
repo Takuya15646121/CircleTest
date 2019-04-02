@@ -8,7 +8,19 @@ jobs:
     docker:
       # specify the version you desire here
       - image: circleci/ruby:2.4.1-node-browsers
-
+        environment:
+          DATABASE_HOST:db
+          DATABASE_PORT:5432
+          DATABASE_USERs:ample_app
+          DATABASE_PASSWORD:1234
+          RUBYOPT:-EUTF-8
+          REDIS_URL:redis://redis:6379
+      - image: postgres:9.2.23
+        environment:
+          POSTGRES_USER:sample_app
+          POSTGRES_PASSWORD:1234
+        expose:
+          5432
       # Specify service dependencies here if necessary
       # CircleCI maintains a library of pre-built images
       # documented at https://circleci.com/docs/2.0/circleci-images/
