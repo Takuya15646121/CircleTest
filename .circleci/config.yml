@@ -9,7 +9,6 @@ jobs:
       # specify the version you desire here
       - image: circleci/ruby:2.4.1-node-browsers
         environment:
-          - "DATABASE_HOST=127.0.0.1:5432"
           - "DATABASE_PORT=5432"
           - "DATABASE_USER=sample_app"
           - "DATABASE_PASSWORD=1234"
