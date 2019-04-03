@@ -34,6 +34,9 @@ gem 'jbuilder', '~> 2.5'
 gem "kaminari", "~> 0.17.0"
 gem "kaminari-bootstrap", "~> 3.0.1"
 
+# React Rails
+gem 'react-rails'
+gem 'webpacker', github: "rails/webpacker"
 
 # Use Redis adapter to run Action Cable in production
 gem 'redis', '~> 3.0'
